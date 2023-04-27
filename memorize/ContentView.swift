@@ -20,13 +20,32 @@ struct ContentView: View {
             }
             Spacer()
             HStack {
+                ThemeButton(iconName: "car.fill", label: "Vehicles")
+                Spacer()
+                ThemeButton(iconName: "pawprint.fill", label: "Animals")
+                Spacer()
+                ThemeButton(iconName: "face.smiling.inverse", label: "Faces")
             }
         }
         .padding(.horizontal)
     }
 }
 
-
+struct ThemeButton: View {
+    let iconName: String
+    let label: String
+    
+    var body: some View {
+        Button {
+            print("hello")
+        } label: {
+            VStack {
+                Image(systemName: iconName)
+                Text(label)
+            }
+        }
+    }
+}
 
 struct CardView: View {
     let card: MemoryGame<String>.Card
