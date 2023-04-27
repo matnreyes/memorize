@@ -21,11 +21,6 @@ struct ContentView: View {
             Spacer()
             HStack {
                 Button {
-                    Text("Hello")
-                }, {
-                    
-                }
-                
             }
         }
         .padding(.horizontal)
